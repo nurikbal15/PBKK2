@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BukuController;
+use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MahasiswaController;
@@ -27,3 +29,5 @@ use App\Http\Controllers\MahasiswaController;
 // });
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/mahasiswa/{npm}', [MahasiswaController::class, 'view']);
+Route::get('/buku/{idbuku}', [BukuController::class, 'view']);
+Route::get('/siswa/{nisn}', [SiswaController::class, 'view']);
